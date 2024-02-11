@@ -11,18 +11,19 @@ fn main() {
 
 #[derive(Debug, Default)]
 struct Support {
+    coordinates: Coordinates,
     wx: bool,
     wy: bool,
     wz: bool,
     px: bool,
     py: bool,
     pz: bool,
-    coordinates: Coordinates
 }
 
 #[derive(Debug, Default)]
 struct Bend {
-    coordinates: Coordinates
+    coordinates: Coordinates,
+    bend_readius: f32,
 }
 
 #[derive(Debug, Default, Clone)]
