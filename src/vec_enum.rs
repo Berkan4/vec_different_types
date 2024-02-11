@@ -1,4 +1,4 @@
-use crate::{Bend, Coordinates, Support};
+use crate::structs::{Bend, Coordinates, Support};
 
 
 enum NodeEnum {
