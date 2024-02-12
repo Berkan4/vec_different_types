@@ -1,6 +1,5 @@
 use crate::structs::{Bend, Coordinates, Support};
 
-
 enum NodeEnum {
     Support(Support),
     Bend(Bend),

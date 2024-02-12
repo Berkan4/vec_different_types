@@ -88,4 +88,28 @@ pub fn trait_vec() {
     }
 }
 ```
+### Using an alternative struct
+Create a struct `Node` with a field `node_type`
+```rust
+struct Node {
+    coordinates: Coordinates,
+    node_type: NodeType
+}
+```
+Add an enum as a replacement for the structs `Support` and `Bend`
+```rust
+enum NodeType {
+    Support(Support),
+    Bend(Bend),
+}
+```
+Implement the function with the shared behaviour
+```rust
+impl Node {
+    fn coordinates(&self) -> Coordinates {
+        self.coordinates.clone()
+    }
+}
+```
+
 
