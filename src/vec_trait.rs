@@ -1,4 +1,4 @@
-use crate::structs::{Bend, Coordinates, Support};
+use crate::structs::{Spring, Coordinates, Support};
 trait NodeTrait {
     fn coordinates(&self) -> Coordinates;
 }
@@ -9,7 +9,7 @@ impl NodeTrait for Support {
     }
 }
 
-impl NodeTrait for Bend {
+impl NodeTrait for Spring {
     fn coordinates(&self) -> Coordinates {
         self.coordinates.clone()
     }
@@ -18,7 +18,7 @@ impl NodeTrait for Bend {
 pub fn trait_vec() {
     let mut vec: Vec<Box<dyn NodeTrait>> = Vec::new();
     vec.push(Box::new(Support::default()));
-    vec.push(Box::new(Bend::default()));
+    vec.push(Box::new(Spring::default()));
 
     println!("\nVector with Box<dyn Trait>:\n");
     for element in vec {

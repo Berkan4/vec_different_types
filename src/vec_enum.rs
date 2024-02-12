@@ -1,8 +1,8 @@
-use crate::structs::{Bend, Coordinates, Support};
+use crate::structs::{Spring, Coordinates, Support};
 
 enum NodeEnum {
     Support(Support),
-    Bend(Bend),
+    Bend(Spring),
 }
 
 impl NodeEnum {
@@ -17,7 +17,7 @@ impl NodeEnum {
 pub fn enum_vec() {
     let mut vec: Vec<NodeEnum> = Vec::new();
     vec.push(NodeEnum::Support(Support::default()));
-    vec.push(NodeEnum::Bend(Bend::default()));
+    vec.push(NodeEnum::Bend(Spring::default()));
 
     println!("\nVector with Enum:\n");
     for element in vec {
